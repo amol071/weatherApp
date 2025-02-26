@@ -1,0 +1,70 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    transition: background 1s ease-in-out;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 500px;
+}
+
+.input-group input {
+    font-size: 1.1rem;
+    padding: 12px;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.input-group input:focus {
+    box-shadow: 0px 0px 10px rgba(0, 123, 255, 0.5);
+    border: 2px solid #007bff;
+}
+
+#weatherCard {
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.9); /* Slightly more visible */
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: all 0.5s ease-in-out;
+    transform: scale(1);
+    opacity: 1; /* Ensure visibility */
+    user-select: none; /* Prevents text selection */
+    pointer-events: none; /* Disables interaction */
+}
+
+/* Allow interaction with images inside weatherCard */
+#weatherCard img {
+    pointer-events: none;
+}
+
+/* Show when data is loaded */
+.show-card {
+    transform: scale(1) !important;
+    opacity: 1 !important;
+}
+
+
+#weatherIcon {
+    width: 100px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+
+    #weatherCard {
+        max-width: 100%;
+    }
+}
