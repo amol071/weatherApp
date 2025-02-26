@@ -1,4 +1,4 @@
-const apiKey = "fa261abca4eb4b9ab7d182451252602"; // Replace with your valid API key
+const apiKey = "YOUR_WEATHERAPI_KEY"; // Replace with your valid API key
 const searchBtn = document.getElementById("searchBtn");
 const weatherCard = document.getElementById("weatherCard");
 
@@ -102,7 +102,7 @@ async function changeBackground(weather) {
     }
 
     // Use Pexels API to get a relevant image
-    const apiKey = "juAshNF6mAyghrzKFe01FpFVuWGxxkQTPaFKNh3g0Ywt0tyi8L90Z61M"; // Replace with your Pexels API key
+    const apiKey = "YOUR_PEXELS_API_KEY"; // Replace with your Pexels API key
     const url = `https://api.pexels.com/v1/search?query=${query}&per_page=1`;
 
     try {
